@@ -2,7 +2,7 @@ import { Optional } from "../../utils/types";
 
 interface Props {
   text: number | string;
-  width: number;
+  width: String;
   bg: string | null;
   onClick: any;
   disabled: boolean;
@@ -14,7 +14,7 @@ const Button = ({ text, width, bg, onClick, disabled }: ExtendedProps) => (
   <button
     onClick={onClick}
     disabled={disabled}
-    className={`w-${width || 20} bg-${bg || "slate-300"} shadow-inner`}
+    className={`${width || "w-20"} ${bg || "bg-slate-300"} shadow-inner`}
     data-testid="reusable-button"
   >
     {text}
